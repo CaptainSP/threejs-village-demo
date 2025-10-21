@@ -2,7 +2,7 @@ import { useLoader } from "@react-three/fiber";
 import { FBXLoader } from "three/addons/loaders/FBXLoader.js";
 
 function EmptyLot(props) {
-  const fbx = useLoader(FBXLoader, "/tiles/base/hex_grass.fbx");
+  const fbx = useLoader(FBXLoader, "/assets/hex_grass.fbx");
 
   const modal = fbx.clone();
 

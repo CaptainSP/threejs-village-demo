@@ -4,8 +4,6 @@ import { TextureLoader } from "three";
 import { CuboidCollider, RigidBody } from "@react-three/rapier";
 
 import BuildingExample from "../buildings/BuildingExample";
-import Mine from "../buildings/Mine";
-import EmptyLot from "../background/EmptyLot";
 
 function Scene() {
   const colorMap = useLoader(
@@ -14,7 +12,7 @@ function Scene() {
   );
 
   return (
-    <mesh>
+    <>
       <OrbitControls
         // minPolarAngle={Math.PI / 6}
         // maxPolarAngle={Math.PI / 3}
@@ -30,13 +28,13 @@ function Scene() {
         castShadow
       />
 
-      <EmptyLot scale={0.01} position={[-2, 0.1, 2]} />
+      {/* <EmptyLot scale={0.01} position={[-2, 0.1, 2]} /> */}
       <BuildingExample scale={0.01} position={[0, 0, -2]} />
 
-      <EmptyLot scale={0.01} position={[2, 0.1, 2]} />
+      {/* <EmptyLot scale={0.01} position={[2, 0.1, 2]} />
       <Mine scale={0.01} position={[2, 0, 2]} rotation-y={0.25 * Math.PI} />
 
-      <EmptyLot scale={0.01} position={[0, 0.1, -2]} />
+      <EmptyLot scale={0.01} position={[0, 0.1, -2]} /> */}
 
       <RigidBody colliders={false} type="fixed" position-y={-0.5}>
         {/* <CuboidCollider args={[0.5, 0.5, 0.5]} /> */}
@@ -44,7 +42,7 @@ function Scene() {
           {/* <meshStandardMaterial map={colorMap} /> */}
         </Box>
       </RigidBody>
-    </mesh>
+    </>
   );
 }
 

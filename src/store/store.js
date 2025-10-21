@@ -16,7 +16,7 @@ export const useGameStore = create(
     buildLots: {
       0: {
         entity: "building_tower_base",
-        level: 1,
+        level: 2,
         status: "active",
         stateStartDate: null,
         stateEndDate: null,
@@ -32,6 +32,13 @@ export const useGameStore = create(
         entity: "building_mine",
         level: 1,
         status: "active",
+        stateStartDate: null,
+        stateEndDate: null,
+      },
+      3: {
+        entity: "building_market",
+        level: 1,
+        status: "building",
         stateStartDate: null,
         stateEndDate: null,
       },

@@ -1,8 +1,10 @@
-import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
 import { Physics } from "@react-three/rapier";
 
-import Scene2 from "./features/scene/Scene2";
+import Scene from "../src/features/scene/Scene";
+import Scene2 from "../src/features/scene/Scene2";
+import ThreeLoader from "./components/ThreeLoader";
 
 function App() {
   return (
@@ -14,7 +16,7 @@ function App() {
         shadows
       >
         <color attach="background" args={["#dbecfb"]} />
-        <Suspense>
+        <Suspense fallback={<ThreeLoader />}>
           <Physics>
             <Scene2 />
           </Physics>
