@@ -42,6 +42,41 @@ export const useGameStore = create(
         stateStartDate: null,
         stateEndDate: null,
       },
+      4: {
+        entity: null,
+        level: 0,
+        status: null,
+        stateStartDate: null,
+        stateEndDate: null,
+      },
+      5: {
+        entity: null,
+        level: 0,
+        status: null,
+        stateStartDate: null,
+        stateEndDate: null,
+      },
+      6: {
+        entity: null,
+        level: 0,
+        status: null,
+        stateStartDate: null,
+        stateEndDate: null,
+      },
+      7: {
+        entity: "building_market",
+        level: 1,
+        status: "active",
+        stateStartDate: null,
+        stateEndDate: null,
+      },
+      8: {
+        entity: null,
+        level: 0,
+        status: null,
+        stateStartDate: null,
+        stateEndDate: null,
+      },
     },
     // Upgrade Building
     upgradeBuilding: (lotId) => {

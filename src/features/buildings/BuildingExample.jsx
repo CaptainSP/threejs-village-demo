@@ -1,8 +1,11 @@
 import { useLoader } from "@react-three/fiber";
 import { FBXLoader } from "three/addons/loaders/FBXLoader.js";
 
-function BuildingExample(props) {
-  const fbx = useLoader(FBXLoader, "/assets/building_barracks_blue.fbx");
+function BuildingExample({ asset, ...props }) {
+  const fbx = useLoader(
+    FBXLoader,
+    `/assets/${asset || `building_barracks`}_blue.fbx`
+  );
 
   const modal = fbx.clone();
 

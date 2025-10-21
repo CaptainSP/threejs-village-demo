@@ -8,9 +8,10 @@ function App() {
   return (
     <div id="canvas-container">
       <Canvas
-        camera={{ position: [10, 10, 10], fov: 50 }}
+        camera={{ position: [10, 10, 10], fov: 45 }}
         style={{ width: "100vw", height: "100vh" }}
         fallback={<div>Device does not support WebGL</div>}
+        gl={{ antialias: true }}
         shadows
       >
         <color attach="background" args={["#dbecfb"]} />
