@@ -1,0 +1,11 @@
+Model Information:
+* title:	Villager Walking
+* source:	https://sketchfab.com/3d-models/villager-walking-d1667a967a5d49478c14d9976f55b9ea
+* author:	jhonnewnn (https://sketchfab.com/jhonnewnn)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Villager Walking" (https://sketchfab.com/3d-models/villager-walking-d1667a967a5d49478c14d9976f55b9ea) by jhonnewnn (https://sketchfab.com/jhonnewnn) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

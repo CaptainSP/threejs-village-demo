@@ -4,6 +4,7 @@ import { useLoader } from "@react-three/fiber";
 import { TextureLoader, RepeatWrapping } from "three";
 
 import BuildLots from "../buildings/BuildLots";
+import { WalkingCharacter } from "../characters/WalkingCharacter";
 
 function Scene2() {
   const groundTexture = useLoader(TextureLoader, "/assets/ground_texture.png");
@@ -69,6 +70,8 @@ function Scene2() {
       <hemisphereLight args={["#87ceeb", "#d4a574", 0.5]} />
 
       <BuildLots />
+
+      <WalkingCharacter position={[0, 0.1, 0]} />
 
       <RigidBody colliders={false} type="fixed" position-y={-0.5}>
         <Box scale={[15, 1, 15]} receiveShadow>

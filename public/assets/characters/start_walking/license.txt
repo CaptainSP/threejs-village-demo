@@ -1,0 +1,8 @@
+Model Information:
+* title:	Start Walking
+* source:	https://sketchfab.com/3d-models/start-walking-e5b5d27b3d3641d6b4afb3cf8c849956
+* author:	sarasp144972 (https://sketchfab.com/sarasp144972)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

@@ -1,5 +1,3 @@
-import { useMemo } from "react";
-
 import { useGameStore } from "../../store/store";
 import EmptyLot from "../background/EmptyLot";
 import BuildingExample from "./BuildingExample";
@@ -7,30 +5,7 @@ import BuildingProduction from "./BuildingProduction";
 
 function BuildLots() {
   const buildLots = useGameStore((state) => state.buildLots);
-
-  const lotPositions = useMemo(() => {
-    const positions = {};
-    const usedPositions = new Set();
-
-    for (let i = 0; i < 9; i++) {
-      let x, z, posKey;
-      let attempts = 0;
-
-      do {
-        x = Math.floor(Math.random() * 7) - 3;
-        z = Math.floor(Math.random() * 7) - 3;
-        posKey = `${x},${z}`;
-        attempts++;
-
-        if (attempts > 100) break;
-      } while (usedPositions.has(posKey));
-
-      usedPositions.add(posKey);
-      positions[i] = { x: x * 2, z: z * 2 };
-    }
-
-    return positions;
-  }, []);
+  const lotPositions = useGameStore((state) => state.lotPositions);
 
   return Object.entries(buildLots).map(([id, lot]) => {
     const position = lotPositions[id] || { x: 0, z: 0 };
