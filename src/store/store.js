@@ -13,6 +13,7 @@ export const useGameStore = create(
     userLevel: 0,
     userName: "kullanici",
     gameState: gameStates.VILLAGE,
+    activeObject: null,
     buildLots: {
       0: {
         entity: "building_tower_base",
@@ -77,6 +78,26 @@ export const useGameStore = create(
         stateStartDate: null,
         stateEndDate: null,
       },
+    },
+    decorationLots: {
+      0: {
+        object: "weaponrack",
+      },
+      1: {
+        object: null,
+      },
+    },
+    // Select Build or Decoration
+    setActiveObject: (object, id, type = "build") => {
+      set((state) => ({
+        activeObject: object
+          ? {
+              data: object,
+              id: id,
+              type: type, // 'build' or 'decoration'
+            }
+          : null,
+      }));
     },
     // Upgrade Building
     upgradeBuilding: (lotId) => {

@@ -12,23 +12,21 @@ function BuildLots() {
     const positions = {};
     const usedPositions = new Set();
 
-    // 9 tane pozisyon üret
     for (let i = 0; i < 9; i++) {
       let x, z, posKey;
       let attempts = 0;
 
-      // Çakışmayan pozisyon bul
       do {
-        x = Math.floor(Math.random() * 7) - 3; // -3 ile 3 arası
+        x = Math.floor(Math.random() * 7) - 3;
         z = Math.floor(Math.random() * 7) - 3;
         posKey = `${x},${z}`;
         attempts++;
 
-        if (attempts > 100) break; // Sonsuz döngüyü önle
+        if (attempts > 100) break;
       } while (usedPositions.has(posKey));
 
       usedPositions.add(posKey);
-      positions[i] = { x: x * 2, z: z * 2 }; // Aralarında boşluk için *2
+      positions[i] = { x: x * 2, z: z * 2 };
     }
 
     return positions;
@@ -41,11 +39,21 @@ function BuildLots() {
     if (lot.entity === null)
       return <EmptyLot key={id} scale={0.005} position={pos} />;
 
-    if (lot.status === `building`)
-      return <BuildingProduction key={id} scale={0.01} position={pos} />;
+    if (lot.status === "building")
+      return (
+        <BuildingProduction
+          buildData={lot}
+          buildId={id}
+          key={id}
+          scale={0.01}
+          position={pos}
+        />
+      );
 
     return (
       <BuildingExample
+        buildData={lot}
+        buildId={id}
         asset={lot.entity}
         key={id}
         scale={0.01}

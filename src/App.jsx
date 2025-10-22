@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Physics } from "@react-three/rapier";
 
 import Scene2 from "./features/scene/Scene2";
+import HUD from "./components/HUD";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           </Physics>
         </Suspense>
       </Canvas>
+
+      <HUD />
     </div>
   );
 }
